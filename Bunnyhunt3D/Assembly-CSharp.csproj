@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Hunter.cs" />
      <Compile Include="Assets\Rope.cs" />
+     <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Global.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
