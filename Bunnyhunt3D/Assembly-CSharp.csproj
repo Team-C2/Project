@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Controller.cs" />
      <Compile Include="Assets\Hunter.cs" />
      <Compile Include="Assets\Rope.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
