@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{44F14300-F308-52BD-98E3-4334F7F05397}") = "Bunnyhunt3D", "Assembly-CSharp-firstpass-vs.csproj", "{F2314E8E-98D9-13A1-F5E7-565B94E33858}"
+EndProject
 Project("{44F14300-F308-52BD-98E3-4334F7F05397}") = "Bunnyhunt3D", "Assembly-CSharp-vs.csproj", "{CC67BF18-F68E-4408-6C5C-5F0575C390FC}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2314E8E-98D9-13A1-F5E7-565B94E33858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2314E8E-98D9-13A1-F5E7-565B94E33858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2314E8E-98D9-13A1-F5E7-565B94E33858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2314E8E-98D9-13A1-F5E7-565B94E33858}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CC67BF18-F68E-4408-6C5C-5F0575C390FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC67BF18-F68E-4408-6C5C-5F0575C390FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC67BF18-F68E-4408-6C5C-5F0575C390FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
