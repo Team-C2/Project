@@ -22,16 +22,16 @@ public class Controller : MonoBehaviour {
 			float moveVertical = Input.GetAxis("Vertical");
 			
 			Vector3 movement = new Vector3(moveHorizontal * movementSpeed, 0f, moveVertical * movementSpeed);
-			this.rigidbody.velocity = movement;
+            GameObject.FindGameObjectWithTag("bunny").rigidbody.velocity = movement;
 		}
 		
-		if (this.gameObject.tag == "hunter" && (Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d") || Input.GetKey("w")))
+		if (this.gameObject.tag == "hunter" && (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d")))
 		{
-			float moveHorizontal = Input.GetAxis("Horizontal");
-			float moveVertical = Input.GetAxis("Vertical");
+			float moveHorizontal = Input.GetAxis("Horizontal2");
+			float moveVertical = Input.GetAxis("Vertical2");
 			
 			Vector3 movement = new Vector3(moveHorizontal * movementSpeed, 0f, moveVertical * movementSpeed);
-			this.rigidbody.velocity = movement;
+			GameObject.FindGameObjectWithTag("hunter").rigidbody.velocity = movement;
 		}
 	}
 }
