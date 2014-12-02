@@ -1,25 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class Countdown : Global
-{
-	public float timeLeft = 100.0f;
+public class Timer : Global {
+
+	float timer = 100;
+	// Use this for initialization
+	void Start () {
 	
-	public void Update()
-	{
-		timeLeft -= Time.deltaTime;
-		
-		if (timeLeft <= 0.0f)
-		{
-			Application.Quit ();
-			guiText.text = "You ran out of time";
-		}
-		else
-		{
-			guiText.text = "Time left = " + (int)timeLeft + " seconds";
-		}
-		
 	}
 	
+	// Update is called once per frame
+	void Update () {
+		timer -= Time.deltaTime;
+		if (timer <= 0)
+		{
+			timer = 0;
+			Application.Quit();
+		}
+	}
+
+	void OnGUI ()
+	{
+		GUI.Box(new Rect(Screen.width / 2 - 20, 10, 40, 25), "" + timer.ToString("0"));
+	}
 }
