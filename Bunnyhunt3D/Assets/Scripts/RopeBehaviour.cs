@@ -3,29 +3,30 @@ using System.Collections;
 
 public class RopeBehaviour : MonoBehaviour {
 
-<<<<<<< HEAD
+
 	public bool activeRope;
 	public Transform hunter;
 	public Transform ropePrefab;
 	
 	void Start () 
 	{
-		activeRope = true;
+		activeRope = true;}
 		//hunter = GameObject.FindGameObjectsWithTag ("hunter");
-=======
-	// Use this for initialization
-	void Start () {
->>>>>>> origin/master
 
-	}
 	
 	// Update is called once per frame
-<<<<<<< HEAD
 	void Update () 
 	{
 		if (activeRope == true)
 		{
-			ScaleToHunter (hunter);
+            try
+            {
+                ScaleToHunter(hunter);
+            }
+            catch 
+            {
+                Debug.Log("Failed ScaleToHunter");
+            }
 		}
 
 	}
@@ -40,17 +41,13 @@ public class RopeBehaviour : MonoBehaviour {
 		this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, q, 6);
 	}
 
-	void OnCollision(Collider other)
-	{
-		if (other.tag == "pole") 
-		{
-			this.activeRope = false;
-			Instantiate(ropePrefab, other.transform.position, Quaternion.identity);
-		}
+    void OnCollision(Collider other)
+    {
+        if (other.tag == "pole")
+        {
+            this.activeRope = false;
+            Instantiate(ropePrefab, other.transform.position, Quaternion.identity);
+        }
+    }
 
-=======
-	void Update () {
-	
->>>>>>> origin/master
-	}
 }
