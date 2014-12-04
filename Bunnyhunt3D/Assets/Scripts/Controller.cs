@@ -3,18 +3,8 @@ using System.Collections;
 
 public class Controller : MonoBehaviour {
     public float movementSpeed = 50;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-	void FixedUpdate()
+    
+    void FixedUpdate()
 	{
 		if (this.gameObject.tag == "bunny")
 		{
