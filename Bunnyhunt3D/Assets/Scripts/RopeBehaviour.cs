@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RopeBehaviour : Global {
+public class RopeBehaviour : MonoBehaviour {
 
+<<<<<<< HEAD
 	public bool activeRope;
 	public Transform hunter;
 	public Transform ropePrefab;
@@ -11,10 +12,15 @@ public class RopeBehaviour : Global {
 	{
 		activeRope = true;
 		//hunter = GameObject.FindGameObjectsWithTag ("hunter");
+=======
+	// Use this for initialization
+	void Start () {
+>>>>>>> origin/master
 
 	}
 	
 	// Update is called once per frame
+<<<<<<< HEAD
 	void Update () 
 	{
 		if (activeRope == true)
@@ -42,5 +48,9 @@ public class RopeBehaviour : Global {
 			Instantiate(ropePrefab, other.transform.position, Quaternion.identity);
 		}
 
+=======
+	void Update () {
+	
+>>>>>>> origin/master
 	}
 }
