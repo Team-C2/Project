@@ -3,7 +3,6 @@ using System.Collections;
 
 public class RopeBehaviour : MonoBehaviour {
 
-<<<<<<< HEAD
 	public bool activeRope;
 	public Transform hunter;
 	public Transform ropePrefab;
@@ -11,16 +10,10 @@ public class RopeBehaviour : MonoBehaviour {
 	void Start () 
 	{
 		activeRope = true;
-		//hunter = GameObject.FindGameObjectsWithTag ("hunter");
-=======
-	// Use this for initialization
-	void Start () {
->>>>>>> origin/master
 
 	}
 	
 	// Update is called once per frame
-<<<<<<< HEAD
 	void Update () 
 	{
 		if (activeRope == true)
@@ -47,10 +40,5 @@ public class RopeBehaviour : MonoBehaviour {
 			this.activeRope = false;
 			Instantiate(ropePrefab, other.transform.position, Quaternion.identity);
 		}
-
-=======
-	void Update () {
-	
->>>>>>> origin/master
 	}
 }
