@@ -29,10 +29,17 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 																																																										GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																																																					GlobalSection(MonoDevelopProperties) = preSolution
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 =======
 																																																			GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of 1cb0161... assemblies
+>>>>>>> origin/master
 =======
 <<<<<<< HEAD
 																																											GlobalSection(MonoDevelopProperties) = preSolution
