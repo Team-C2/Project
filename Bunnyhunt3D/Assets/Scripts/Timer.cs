@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Timer : Global {
 
-	float timer = 100;
+    public float timer;
 	// Use this for initialization
 	void Start () {
-	
+        timer = 100;
 	}
 	
 	// Update is called once per frame
@@ -24,3 +24,4 @@ public class Timer : Global {
 		GUI.Box(new Rect(Screen.width / 2 - 20, 10, 40, 25), "" + timer.ToString("0"));
 	}
 }
+
