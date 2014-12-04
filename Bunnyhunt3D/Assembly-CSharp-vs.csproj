@@ -49,7 +49,7 @@
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Global.cs" />
      <Compile Include="Assets\Scripts\Hunter.cs" />
-     <Compile Include="Assets\Scripts\Rope.cs" />
+     <Compile Include="Assets\Scripts\RopeBehaviour.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Tom/Documents/GitHub/Project/Bunnyhunt3D/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
