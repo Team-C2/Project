@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class RopeBehaviour : MonoBehaviour {
@@ -47,15 +47,17 @@ public class RopeBehaviour : MonoBehaviour {
 		currRope.transform.position = originalPilar.transform.position;
 		
 		//GameObject rope = GameObject.Instantiate (currRope, Pillar.transform.position, Quaternion.identity) as GameObject;
-		Vector3 lookPos = hunter.transform.position - originalPilar.transform.position;
+		Vector3 lookPos = hunter.transform.position;
+		lookPos = lookPos - originalPilar.transform.position;
 		float angle = Mathf.Atan2 (lookPos.y, lookPos.x) * Mathf.Rad2Deg;
-		//transform.rotation = Quaternion.Slerp (currRope.transform.rotation, 
-		//                                       Quaternion.AngleAxis (angle - 90, Vector3.back), Time.deltaTime);
+		currRope.transform.rotation = Quaternion.Slerp(currRope.transform.rotation, Quaternion.AngleAxis(angle , Vector3.up), Mathf.Infinity);
+		//transform.rotation = Quaternion.Slerp (currRope.transform.Quaternion.AngleAxis (angle - 90, Vector3.back), Time.deltaTime);
 		//currRope.transform.rotation = new Vector3 (0, angle, 0);
-		Debug.Log (angle);
+		//Debug.Log (angle);
 		
-		currRope.transform.localScale = Vector3.Lerp (currRope.transform.localScale, lookPos, Mathf.Infinity);
-		currRope.transform.position = new Vector3 (lookPos.x/2, lookPos.y/2, lookPos.z/2);
+		currRope.transform.localScale = new Vector3(currRope.transform.localScale.x, currRope.transform.localScale.y, lookPos.z);
+		currRope.transform.position = new Vector3 (lookPos.x/2, currRope.transform.position.y, lookPos.z/2);
+		//Debug.Log (currRope.transform.position.y + "  " + lookPos.y);
 	}
 	
 	private void Attach(GameObject pillarA, GameObject pillarB)
