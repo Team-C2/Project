@@ -34,7 +34,7 @@ public class VictoryHandling : Global {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger detected");
+
         if (other.tag == "bunny" && this.tag == "hunter")
         {
             Debug.Log("Hunter collided with hunter");
