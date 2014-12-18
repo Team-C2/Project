@@ -47,15 +47,16 @@ public class RopeBehaviour : MonoBehaviour {
 		currRope.transform.position = originalPilar.transform.position;
 		
 		//GameObject rope = GameObject.Instantiate (currRope, Pillar.transform.position, Quaternion.identity) as GameObject;
-		Vector3 lookPos = hunter.transform.position;
-		lookPos = lookPos - originalPilar.transform.position;
-		float angle = Mathf.Atan2 (lookPos.y, lookPos.x) * Mathf.Rad2Deg;
-		currRope.transform.rotation = Quaternion.Slerp(currRope.transform.rotation, Quaternion.AngleAxis(angle , Vector3.up), Mathf.Infinity);
+		Vector3 lookPos = hunter.transform.position - pillar.transform.position;
+		float scaleAmount = Mathf.Sqrt(Mathf.Pow (lookPos.x, 2) + Mathf.Pow (lookPos.z, 2));
+		float angle = Mathf.Atan2 (lookPos.z, lookPos.x) * Mathf.Rad2Deg;
+		currRope.transform.rotation = Quaternion.Slerp(currRope.transform.rotation , Quaternion.AngleAxis(angle - 90, Vector3.down), Mathf.Infinity);
 		//transform.rotation = Quaternion.Slerp (currRope.transform.Quaternion.AngleAxis (angle - 90, Vector3.back), Time.deltaTime);
 		//currRope.transform.rotation = new Vector3 (0, angle, 0);
-		//Debug.Log (angle);
-		
-		currRope.transform.localScale = new Vector3(currRope.transform.localScale.x, currRope.transform.localScale.y, lookPos.z);
+		//currRope.transform.rotation = new Vector3 (currRope.transform.rotation.x, angle,currRope.transform.rotation.z);
+
+		Debug.Log (angle);
+		currRope.transform.localScale = new Vector3(currRope.transform.localScale.x, currRope.transform.localScale.y, scaleAmount);
 		currRope.transform.position = new Vector3 (lookPos.x/2, currRope.transform.position.y, lookPos.z/2);
 		//Debug.Log (currRope.transform.position.y + "  " + lookPos.y);
 	}
