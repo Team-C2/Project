@@ -50,11 +50,9 @@
      <Compile Include="Assets\Scripts\Global.cs" />
      <Compile Include="Assets\Scripts\Hunter.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
-     <Compile Include="Assets\Scripts\PowerUp.cs" />
      <Compile Include="Assets\Scripts\RopeBehaviour.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\VictoryHandling.cs" />
-     <Compile Include="Assets\Scripts\spawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
